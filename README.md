@@ -4,33 +4,22 @@ Olá caro desenvolvedor, nesse teste analisaremos seu conhecimento geral e inclu
 
 ## Instruções
 
-O desafio consiste em desenvolver uma simples aplicação WEB para um curso on-line, que possui basicamente 3 páginas, com as seguintes funcionalidades:
+O desafio consiste em desenvolver uma simples aplicação WEB para um curso on-line, com as seguintes funcionalidades:
 
-- C.R.U.D de Cursos
-  Página para a administração dos cursos.
+- C.R.U.D de Produtos
+  Página para a administração dos produtos.
   - Listagem (Com paginação);
   - Criação;
   - Alteração;
-  - Deleção;
+  - Deletar;
 
+- Busca de Produtos
 
-- Visualização de Curso
-  Página para assistir/acessar um curso.
-  - Nome do Curso
-  - Descrição do Curso
-  - Vídeo do Curso
-
-
-- Busca de Curso
   Busca de cursos por Nome ou Categoria (com paginação)
+  Ordenacao de produtos por nome ou categoria
 
 
-Todos os cursos devem possuir Nome, Descrição, Categoria (Direito, Perícia Judicial, Desenvolvimento Pessoal, Gestão de Pessoas ou Cálculos) e a URL do vídeo (youtube).
-
-
-## Banco de dados
-
-- O banco de dados deve ser criado utilizando Migrations, e também utilizar Seeds e Factorys para popular as informações no banco de dados.
+Deve se mostrar todos os atributos que tiverem na API
 
 
 ## Tecnologias a serem utilizadas
@@ -38,17 +27,13 @@ Todos os cursos devem possuir Nome, Descrição, Categoria (Direito, Perícia Ju
 Devem ser utilizadas as seguintes tecnologias:
 
 - Git
-- React (front-end)
-- Node (back-end)
-- Banco de Dados (a sua escolha)
+- Next (front-end)
 
 ## Entrega
 
 - Para iniciar o teste, faça um fork deste repositório; **Se você apenas clonar o repositório não vai conseguir fazer push.**
 - Crie uma branch com o seu nome completo;
-- Altere o arquivo readme.md com as informações necessárias para executar o seu teste (comandos, migrations, seeds, etc);
 - Depois de finalizado, envie-nos o pull request;
-
 
 ## Bônus
 
