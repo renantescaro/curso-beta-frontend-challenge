@@ -7,7 +7,6 @@ Olá caro desenvolvedor, nesse teste analisaremos seu conhecimento geral e inclu
 O desafio consiste em desenvolver uma simples aplicação WEB para um curso on-line, com as seguintes funcionalidades:
 
 - C.R.U.D de Produtos
-  Página para a administração dos produtos.
   - Listagem (Com paginação);
   - Criação;
   - Alteração;
@@ -15,12 +14,15 @@ O desafio consiste em desenvolver uma simples aplicação WEB para um curso on-l
 
 - Busca de Produtos
 
-  Busca de cursos por Nome ou Categoria (com paginação)
-  Ordenacao de produtos por nome ou categoria
+  Buscar produtos por Title ou Brand
+  Ordenacao de produtos por Title ou Brand
 
 
 Deve se mostrar todos os atributos que tiverem na API
 
+## API DE REFERENCIA
+
+https://dummyjson.com/docs/products
 
 ## Tecnologias a serem utilizadas
 
