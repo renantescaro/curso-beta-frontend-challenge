@@ -12,17 +12,26 @@ O desafio consiste em desenvolver uma simples aplicação WEB para um curso on-l
   - Alteração;
   - Deletar;
 
-- Busca de Produtos
+- C.R.U.D de Categorias
+  - Listagem;
+  - Criação;
+  - Alteração;
+  - Deletar;
+
+- Cada produto pode ter uma ou mais categorias vinculadas ao produto.
+
+- Busca de Produtos(No Front)
 
   Buscar produtos por Title ou Brand
   Ordenacao de produtos por Title ou Brand
-
 
 Deve se mostrar todos os atributos que tiverem na API
 
 ## API DE REFERENCIA
 
-https://dummyjson.com/docs/products
+Crie uma API para realizar as operacoes dos produtos utilizando Node.js
+
+Crie a estrutura do banco de dados utilizando postgres.
 
 ## Tecnologias a serem utilizadas
 
@@ -30,6 +39,7 @@ Devem ser utilizadas as seguintes tecnologias:
 
 - Git
 - Next (front-end)
+- Node.js
 
 ## Entrega
 
