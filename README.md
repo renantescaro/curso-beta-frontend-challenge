@@ -29,9 +29,13 @@ Deve se mostrar todos os atributos que tiverem na API
 
 ## API DE REFERENCIA
 
-Crie uma API para realizar as operacoes dos produtos utilizando Node.js
+Utilize a API de refência como https://dummyjson.com/docs/products;
 
-Crie a estrutura do banco de dados utilizando postgres.
+## Observações IMPORTANTES
+
+- Iremos analisar o layout desenvolvido pelo participante, tanto em sua usabilidade quanto visualmente.
+- Iremos analisar principalmente qualidade de código e a forma que você cria o layout, realiza validacoes, testes e gerencia formulários e o CRUD.
+- Necessário realizar os testes unitários do código desenvolvido.
 
 ## Tecnologias a serem utilizadas
 
@@ -53,7 +57,6 @@ Sinta-se livre para atender ou não alguns dos seguintes itens:
 - Deploy da aplicação em alguma cloud (aws, heroku, Github Pages etc);
 - Utilização de typescript;
 - Utilização de Next.js
-- Validação de entrada de dados;
 - Autenticação de usuários
 
 
