@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import Navbar from '../navbar';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const ProductsPage = ({ products }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [searchTerm, setSearchTerm] = useState('');
@@ -30,7 +32,7 @@ const ProductsPage = ({ products }) => {
         const isConfirmed = window.confirm('Tem certeza de que deseja excluir este produto?');
         if (isConfirmed) {
             try {
-                const response = await fetch(`http://localhost:3000/products?id=${productId}`, {
+                const response = await fetch(`${API_URL}/products?id=${productId}`, {
                     method: 'DELETE',
                 });
                 if (response.ok) {
@@ -107,7 +109,7 @@ const ProductsPage = ({ products }) => {
 };
 
 export async function getServerSideProps() {
-    const res = await fetch('http://localhost:3000/products');
+    const res = await fetch(`${API_URL}/products`);
     const products = await res.json();
 
     return {

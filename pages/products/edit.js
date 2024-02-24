@@ -3,6 +3,8 @@ import { useRouter } from 'next/router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../navbar';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const EditProductPage = () => {
     const router = useRouter();
     const { id } = router.query;
@@ -14,7 +16,7 @@ const EditProductPage = () => {
 
     useEffect(() => {
         if (id) {
-            fetch(`http://localhost:3000/products/?id=${id}`)
+            fetch(`${API_URL}/products/?id=${id}`)
                 .then(response => response.json())
                 .then(data => {
                     setProduct(data);
@@ -34,7 +36,7 @@ const EditProductPage = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch(`http://localhost:3000/products?id=${id}`, {
+            const response = await fetch(`${API_URL}/products?id=${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

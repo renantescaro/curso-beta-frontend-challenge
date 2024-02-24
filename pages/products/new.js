@@ -2,6 +2,8 @@ import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../navbar';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const NewProductForm = () => {
     const [formData, setFormData] = useState({
         title: '',
@@ -20,7 +22,7 @@ const NewProductForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://localhost:3000/products', {
+            const response = await fetch(`${API_URL}/products`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -1,3 +1,13 @@
+# Backend
+https://github.com/renantescaro/curso-beta-backend
+
+# Backend Heroku
+https://curso-beta-71fca35041cf.herokuapp.com/
+
+# Frontend Heroku
+https://curso-beta-frontend-a28eb2280370.herokuapp.com/
+
+
 # Teste para candidatos à vaga de Desenvolvedor REACT PLENO
 
 Olá caro desenvolvedor, nesse teste analisaremos seu conhecimento geral e inclusive velocidade de desenvolvimento. Abaixo explicaremos tudo o que será necessário.
