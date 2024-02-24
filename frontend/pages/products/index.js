@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ProductsPage = ({ products }) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -12,7 +13,7 @@ const ProductsPage = ({ products }) => {
 
     const filterProducts = (term) => {
         const filtered = products.filter(product =>
-            product.name.toLowerCase().includes(term.toLowerCase())
+            product.title.toLowerCase().includes(term.toLowerCase())
         );
         setFilteredProducts(filtered);
     };
@@ -34,24 +35,50 @@ const ProductsPage = ({ products }) => {
     };
 
     return (
-        <div>
+        <div style={{ padding: "30px" }}>
             <h1>Produtos</h1>
+            <a className='btn btn-primary' href='/products/new'>
+                Cadastrar Novo Produto
+            </a>
+            <br /><br />
+
             <input
                 type="text"
                 placeholder="Buscar produtos..."
+                className='form-control'
                 value={searchTerm}
                 onChange={handleSearchChange}
             />
-            <ul>
-                {currentProducts.map(product => (
-                    <li key={product.id}>{product.name}</li>
-                ))}
-            </ul>
+
+            <table className='table table-striped table-bordered'>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Titulo</th>
+                        <th>Marca</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {currentProducts.map(product => (
+                        <tr key={product.id}>
+                            <td>{product.id}</td>
+                            <td>{product.title}</td>
+                            <td>{product.brand}</td>
+                            <td>
+                                <a className='btn btn-primary' href={'/products/' + product.id}>
+                                    Editar
+                                </a>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
             <div>
                 <button onClick={prevPage} disabled={currentPage === 1}>Anterior</button>
                 <button onClick={nextPage} disabled={indexOfLastProduct >= filteredProducts.length}>Próxima</button>
             </div>
-        </div>
+        </div >
     );
 };
 
