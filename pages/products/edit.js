@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../navbar';
 
@@ -85,6 +86,9 @@ const EditProductPage = () => {
                     <button type="submit" className='btn btn-primary'>
                         Atualizar Produto
                     </button>
+                    <Link className='btn btn-warning' href='/products'>
+                        Cancelar
+                    </Link>
                 </form>
             </div>
 

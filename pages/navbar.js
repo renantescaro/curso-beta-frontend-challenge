@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Navbar() {
@@ -15,24 +16,24 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <Link className="nav-link active" aria-current="page" href="#">Home</Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#"
+                                <Link className="nav-link dropdown-toggle" href="#"
                                     role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     Cadastros
-                                </a>
+                                </Link>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/products">Produtos</a></li>
-                                    <li><a className="dropdown-item" href="/categories">Categorias</a></li>
+                                    <li><Link className="dropdown-item" href="/products">Produtos</Link></li>
+                                    <li><Link className="dropdown-item" href="/categories">Categorias</Link></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" async></script>
         </div>
     );
 }

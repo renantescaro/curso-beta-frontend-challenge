@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Link from 'next/link'
 import Navbar from '../navbar';
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -60,9 +61,9 @@ const ProductsPage = ({ products }) => {
             <Navbar />
 
             <h1>Produtos</h1>
-            <a className='btn btn-primary' href='/products/new'>
+            <Link className='btn btn-primary' href='/products/new'>
                 Cadastrar Novo Produto
-            </a>
+            </Link>
             <br /><br />
 
             <input
@@ -89,9 +90,9 @@ const ProductsPage = ({ products }) => {
                             <td>{product.title}</td>
                             <td>{product.brand}</td>
                             <td>
-                                <a className='btn btn-primary' href={'/products/edit?id=' + product.id}>
+                                <Link className='btn btn-primary' href={'/products/edit?id=' + product.id}>
                                     Editar
-                                </a>
+                                </Link>
                                 <button className='btn btn-danger' onClick={() => handleDelete(product.id)}>
                                     Excluir
                                 </button>

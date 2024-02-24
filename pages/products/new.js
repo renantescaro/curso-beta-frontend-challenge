@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../navbar';
 
@@ -74,9 +75,9 @@ const NewProductForm = () => {
                     <button type="submit" className="btn btn-primary">
                         Cadastrar Produto
                     </button>
-                    <a className='btn btn-warning' href='/products'>
+                    <Link className='btn btn-warning' href='/products'>
                         Cancelar
-                    </a>
+                    </Link>
                 </div>
             </form >
         </div>
