@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from '../navbar';
 
 const ProductsPage = ({ products }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
-    const productsPerPage = 25;
+    const productsPerPage = 5;
 
     useEffect(() => {
         filterProducts(searchTerm);
@@ -26,6 +26,25 @@ const ProductsPage = ({ products }) => {
         setSearchTerm(event.target.value);
     };
 
+    const handleDelete = async (productId) => {
+        const isConfirmed = window.confirm('Tem certeza de que deseja excluir este produto?');
+        if (isConfirmed) {
+            try {
+                const response = await fetch(`http://localhost:3000/products?id=${productId}`, {
+                    method: 'DELETE',
+                });
+                if (response.ok) {
+                    alert('Produto excluído com sucesso!');
+                } else {
+                    alert('Erro ao excluir o produto. Por favor, tente novamente.');
+                }
+            } catch (error) {
+                console.error('Erro ao excluir o produto:', error);
+                alert('Erro ao excluir o produto. Por favor, tente novamente.');
+            }
+        }
+    };
+
     const nextPage = () => {
         setCurrentPage(prevPage => prevPage + 1);
     };
@@ -36,6 +55,8 @@ const ProductsPage = ({ products }) => {
 
     return (
         <div style={{ padding: "30px" }}>
+            <Navbar />
+
             <h1>Produtos</h1>
             <a className='btn btn-primary' href='/products/new'>
                 Cadastrar Novo Produto
@@ -66,9 +87,12 @@ const ProductsPage = ({ products }) => {
                             <td>{product.title}</td>
                             <td>{product.brand}</td>
                             <td>
-                                <a className='btn btn-primary' href={'/products/' + product.id}>
+                                <a className='btn btn-primary' href={'/products/edit?id=' + product.id}>
                                     Editar
                                 </a>
+                                <button className='btn btn-danger' onClick={() => handleDelete(product.id)}>
+                                    Excluir
+                                </button>
                             </td>
                         </tr>
                     ))}

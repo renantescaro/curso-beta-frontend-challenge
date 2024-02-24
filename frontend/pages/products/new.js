@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from '../navbar';
 
 const NewProductForm = () => {
     const [formData, setFormData] = useState({
@@ -45,34 +46,38 @@ const NewProductForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div style={{ padding: "20px" }}>
-                <div className="row mb-3 col-sm-6">
-                    <label htmlFor="title">Titulo:</label>
-                    <input type="text" id="title" name="title"
-                        className="form-control"
-                        value={formData.title} onChange={handleChange} required />
+        <div>
+            <Navbar />
+
+            <form onSubmit={handleSubmit}>
+                <div style={{ padding: "20px" }}>
+                    <div className="row mb-3 col-sm-6">
+                        <label htmlFor="title">Titulo:</label>
+                        <input type="text" id="title" name="title"
+                            className="form-control"
+                            value={formData.title} onChange={handleChange} required />
+                    </div>
+                    <div className="row mb-3 col-sm-6">
+                        <label htmlFor="brand">Marca:</label>
+                        <input type="text" id="brand" name="brand"
+                            className="form-control"
+                            value={formData.brand} onChange={handleChange} required />
+                    </div>
+                    <div className="row mb-3 col-sm-6">
+                        <label htmlFor="description">Descrição:</label>
+                        <textarea id="description" name="description"
+                            className="form-control"
+                            value={formData.description} onChange={handleChange} required />
+                    </div>
+                    <button type="submit" className="btn btn-primary">
+                        Cadastrar Produto
+                    </button>
+                    <a className='btn btn-warning' href='/products'>
+                        Cancelar
+                    </a>
                 </div>
-                <div className="row mb-3 col-sm-6">
-                    <label htmlFor="brand">Marca:</label>
-                    <input type="text" id="brand" name="brand"
-                        className="form-control"
-                        value={formData.brand} onChange={handleChange} required />
-                </div>
-                <div className="row mb-3 col-sm-6">
-                    <label htmlFor="description">Descrição:</label>
-                    <textarea id="description" name="description"
-                        className="form-control"
-                        value={formData.description} onChange={handleChange} required />
-                </div>
-                <button type="submit" className="btn btn-primary">
-                    Cadastrar Produto
-                </button>
-                <a className='btn btn-warning' href='/products'>
-                    Cancelar
-                </a>
-            </div>
-        </form >
+            </form >
+        </div>
     );
 };
 
