@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link'
 import Navbar from '../navbar';
-
-const API_URL = process.env.REACT_APP_API_URL;
+import API_URL from '../config';
 
 const ProductsPage = ({ products }) => {
     const [currentPage, setCurrentPage] = useState(1);
