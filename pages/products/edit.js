@@ -3,7 +3,8 @@ import { useRouter } from 'next/router';
 import Link from 'next/link'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../navbar';
-import API_URL from '../config';
+
+const API_URL = process.env.REACT_APP_API_URL || 'https://curso-beta-71fca35041cf.herokuapp.com';
 
 const EditProductPage = () => {
     const router = useRouter();
