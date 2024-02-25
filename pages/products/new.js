@@ -3,9 +3,7 @@ import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../navbar';
 
-// const API_URL = process.env.REACT_APP_API_URL || 'https://curso-beta-71fca35041cf.herokuapp.com';
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
-
+const API_URL = process.env.REACT_APP_API_URL || 'https://curso-beta-71fca35041cf.herokuapp.com';
 
 const NewProductForm = () => {
     const [categories, setCategories] = useState([]);
