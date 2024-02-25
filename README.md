@@ -1,13 +1,12 @@
-# Backend
+# Backend Repository
 https://github.com/renantescaro/curso-beta-backend
 
-# Backend Heroku
+# Deploy Backend Heroku
 https://curso-beta-71fca35041cf.herokuapp.com/
 
-# Frontend Heroku
+# Deploy Frontend Heroku
 https://curso-beta-frontend-a28eb2280370.herokuapp.com/
 
-npm run build
 
 # Teste para candidatos à vaga de Desenvolvedor REACT PLENO
 
